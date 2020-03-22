@@ -17,7 +17,7 @@ def input_number():
     return num
 
 def input_oper():
-    oper = input("Операция(*, /, +, -): ")
+    oper = input("Операция(*, /, +, -, ^): ")
 
     if oper == '':
         oper = None
@@ -47,7 +47,7 @@ def calc_me(x=None,y=None, oper=None):
         return x + y
     elif oper == '-':
         return x - y
-    elif oper == '^':
+    elif oper == '^' or oper == '**':
         return x ** y
     else:
         return "ERROR: Uknow operation"
